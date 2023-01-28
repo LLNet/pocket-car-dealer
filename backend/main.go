@@ -1,7 +1,15 @@
 package main
 
-// hello word
+import (
+	"log"
+
+	"github.com/pocketbase/pocketbase"
+)
 
 func main() {
-	println("Hello World")
+	app := pocketbase.New()
+
+	if err := app.Start(); err != nil {
+		log.Fatal(err)
+	}
 }
